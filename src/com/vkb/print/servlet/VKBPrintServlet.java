@@ -45,7 +45,7 @@ public class VKBPrintServlet extends HttpServlet {
         String fileName = "C:/Temp/list.docx";
         writeToFile(paragraphs, fileName);
 
-        //printFromFile(fileName);
+//        printFromFile(fileName);
     }
 
     private void printFromFile(String fileName) throws IOException {
@@ -55,17 +55,8 @@ public class VKBPrintServlet extends HttpServlet {
     }
 
     private void writeToFile(Map<String, String> paragraphs, String fileName) throws FileNotFoundException {
-//        PrintWriter out = new PrintWriter(fileName);
-//        out.println(s);
-//        out.flush();
-//        out.close();
-
         DocCreator.createDocFile(fileName, paragraphs);
     }
-
-//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        doPost(req, resp);
-//    }
 
     public static void main(String[] args) throws Exception {
         String port = "8000";
